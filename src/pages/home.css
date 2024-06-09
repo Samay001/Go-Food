@@ -54,7 +54,7 @@
 .custom-button {
   padding: 10px 20px;
   margin-right: 20px;
-  background-color: #4f684a;    
+  background-color: #4f684a;
   color: white;
   border-radius: 25px;
   cursor: pointer;
@@ -62,7 +62,7 @@
 
 .number-container {
   display: flex;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .number-box {
@@ -95,3 +95,23 @@
     margin-top: 1rem;
   }
 }
+
+/* category section styling */
+.category-heading {
+  text-align: center;
+}
+
+.category-buttons{
+  display: flex;
+  justify-content: center;
+  
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 20px;
+  padding: 2rem 4rem;
+
+}
+

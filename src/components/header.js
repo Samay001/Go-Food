@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <nav className="navbar">
       <a className="brand" href="#">
-        Go Food
+        GO FOOD
       </a>
       <div className={`menu ${menuOpen ? 'open' : ''}`}>
         <ul className="nav-links">
