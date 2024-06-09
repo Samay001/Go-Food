@@ -2,10 +2,10 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px 30px;
   width: 100%;
-  position: fixed;
+  position: fixed; 
   /* top: 0; */
   z-index: 1000;
   
@@ -82,8 +82,6 @@
 
 .notification-circle {
   position: relative;
-  top: -1px;
-  right: 17px;
   background-color: #F2C94C;
   color: black;
   border-radius: 50%;
@@ -92,9 +90,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 
+.notification-circle--1 {
+  top: -15px;
+  right: 150px;
+}
+
+.notification-circle--2 {
+  top: -15px;
+  right: 115px;
+}
 .toggle {
   display: none;
   color: black;
@@ -127,13 +134,14 @@
 
   .toggle {
     display: block;
-    margin-right: 2rem;
-    
+    margin-right: 3rem;
+    margin-left: 1rem;
   }
 
   .icons {
     gap: 8px;
     padding-right: 0;
+    padding-left:0.5rem;
   }
 
   .icon {
@@ -141,11 +149,16 @@
     height: 24px;
     font-size: 16px;
   }
-  .notification-circle {
+  .notification-circle--1 {
+    top: -12px;
+    right: 130px; 
+  }
+
+  .notification-circle--2 {
     top: -8px;
-    right: -8px;
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
+    right: 20px;
+  }
+  .navbar{
+    justify-content:space-between;
   }
 }

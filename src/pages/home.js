@@ -5,6 +5,7 @@ import img from "../assets/main2.png";
 import FoodDetails from "../components/foodDetails";
 import axios from "axios";
 import leaf from "../assets/leaf.png";
+import lemon from "../assets/lemon.avif";
 
 const Home = () => {
   const [category, setCategory] = useState("beef");
@@ -20,8 +21,7 @@ const Home = () => {
         `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
       );
       setFoodItems(response.data.meals);
-    } 
-    catch (error) {
+    } catch (error) {
       console.error(error);
     }
   };
@@ -37,9 +37,17 @@ const Home = () => {
         <div className="text-section">
           <div className="heading-home">
             <h3 className="discount-text">Discount up to 20%</h3>
-            <h1 className=" main-text">
+            <h1 class="main-text">
               Buy Fresh And Organic Grocery Food
+              <span class="rounded-rectangle">
+                <img
+                  src={lemon}
+                  alt="Grocery Image" 
+                  class="fruit-image "
+                />
+              </span>
             </h1>
+            <img src={leaf} alt="main" className="responsive-image-leaf1" />
             <h5 className="description-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -60,10 +68,10 @@ const Home = () => {
           </div>
         </div>
         <div className="image-section">
-          <img src={img} alt="main" className="responsive-image" /> 
-          <img src={leaf} alt="main" className="responsive-image-leaf" />
+          <img src={img} alt="main" className="responsive-image" />
+          <img src={leaf} alt="main" className="responsive-image-leaf2" />
+          <img src={leaf} alt="main" className="responsive-image-leaf3" />
         </div>
-        
       </div>
       <div className="container-category">
         <div className="category-heading">
@@ -73,11 +81,21 @@ const Home = () => {
           <h1>Top Category Of Organic Food</h1>
         </div>
         <div className="category-buttons">
-          <button className="category-button" onClick={handleCategory}>beef</button>
-          <button className="category-button" onClick={handleCategory}>breakfast</button>
-          <button className="category-button" onClick={handleCategory}>chicken</button>
-          <button className="category-button" onClick={handleCategory}>dessert</button>
-          <button className="category-button" onClick={handleCategory}>seafood</button>
+          <button className="category-button" onClick={handleCategory}>
+            beef
+          </button>
+          <button className="category-button" onClick={handleCategory}>
+            breakfast
+          </button>
+          <button className="category-button" onClick={handleCategory}>
+            chicken
+          </button>
+          <button className="category-button" onClick={handleCategory}>
+            dessert
+          </button>
+          <button className="category-button" onClick={handleCategory}>
+            seafood
+          </button>
         </div>
         <div className="container">
           {foodItems.slice(0, 6).map((item) => (

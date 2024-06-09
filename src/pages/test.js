@@ -5,8 +5,7 @@ import Home from './home'
 const test = () => {
   return (
     <div>
-        <Header />
-        {/* <h1>Test Page</h1> */}
+        <Home />
     </div>
   )
 }

@@ -26,11 +26,11 @@ const Header = () => {
         <span className="icon"><FiSearch /></span>
         <span className="icon"><FiHome /></span>
         <span className="icon"><FiHeart /></span>
-        <div className="notification-circle">5</div>
         <span className="icon"><FiShoppingBag /></span>
-        <div className="notification-circle">5</div>
         <span className="toggle" onClick={toggleMenu}><FiMenu /></span>
       </div>
+      {/* <span className="notification-circle notification-circle--1">5</span>
+      <span className="notification-circle notification-circle--2">5</span> */}
     </nav>
   );
 };
