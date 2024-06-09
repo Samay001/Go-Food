@@ -1,21 +1,29 @@
+/* Navbar container */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 30px 0;
+  justify-content: space-around;
+  padding: 20px 30px;
   width: 100%;
-  position:fixed;
+  position: fixed;
+  /* top: 0; */
+  z-index: 1000;
   
 }
 
+/* Brand styles */
 .brand {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   color: black;
-  margin-left: 4rem;
 }
 
+.go-text{
+  font-weight: 400;
+}
+
+/* Menu styles */
 .menu {
   display: flex;
   justify-content: center;
@@ -27,32 +35,64 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav-links a {
   color: black;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
+.dropdown-icon {
+  margin-left: 5px;
+  /* margin-top: 10px; */
+  font-size: 12px;
+}
+
+.specialText a{
+  color:white;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 20rem;
+}
+
+/* Icons styles */
 .icons {
   display: flex;
-  gap: 15px;
-  margin-right: 8rem;
+  gap: 10px;
+  /* margin-right: 2rem; */
+  padding-right: 5rem;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #4f684a;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
+  padding: 5px;
+}
+
+.notification-circle {
+  position: relative;
+  top: -1px;
+  right: 17px;
+  background-color: #F2C94C;
+  color: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
 }
 
 .toggle {
@@ -62,6 +102,7 @@
   cursor: pointer;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -86,5 +127,25 @@
 
   .toggle {
     display: block;
+    margin-right: 2rem;
+    
+  }
+
+  .icons {
+    gap: 8px;
+    padding-right: 0;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+  .notification-circle {
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
   }
 }

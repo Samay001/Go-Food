@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style/header.css';
-import { FaHome, FaSearch, FaBell, FaUser, FaBars } from 'react-icons/fa';
+import { FiHome, FiSearch,FiMenu, FiChevronDown,FiArrowRight, FiHeart, FiShoppingBag } from 'react-icons/fi';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,22 +11,25 @@ const Header = () => {
 
   return (
     <nav className="navbar">
-      <a className="brand" href="#">
-        GO FOOD
+      <a href="#" className="brand">
+        <span className="go-text">GO</span> FOOD
       </a>
       <div className={`menu ${menuOpen ? 'open' : ''}`}>
         <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Home <FiChevronDown className="dropdown-icon" /></a></li>
+          <li><a href="#">Groceries <FiChevronDown className="dropdown-icon" /></a></li>
+          <li><a href="#">Pages <FiChevronDown className="dropdown-icon" /></a></li>
+          <li className='specialText'><a href="#">Connect with us <FiArrowRight className="dropdown-icon" /></a></li>
         </ul>
       </div>
       <div className="icons">
-        <span className="icon"><FaHome /></span>
-        <span className="icon"><FaSearch /></span>
-        <span className="icon"><FaBell /></span>
-        <span className="icon"><FaUser /></span>
-        <span className="toggle" onClick={toggleMenu}><FaBars /></span>
+        <span className="icon"><FiSearch /></span>
+        <span className="icon"><FiHome /></span>
+        <span className="icon"><FiHeart /></span>
+        <div className="notification-circle">5</div>
+        <span className="icon"><FiShoppingBag /></span>
+        <div className="notification-circle">5</div>
+        <span className="toggle" onClick={toggleMenu}><FiMenu /></span>
       </div>
     </nav>
   );

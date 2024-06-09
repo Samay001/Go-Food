@@ -4,6 +4,7 @@ import Header from "../components/header";
 import img from "../assets/main2.png";
 import FoodDetails from "../components/foodDetails";
 import axios from "axios";
+import leaf from "../assets/leaf.png";
 
 const Home = () => {
   const [category, setCategory] = useState("beef");
@@ -36,7 +37,7 @@ const Home = () => {
         <div className="text-section">
           <div className="heading-home">
             <h3 className="discount-text">Discount up to 20%</h3>
-            <h1 className="discount-text">
+            <h1 className=" main-text">
               Buy Fresh And Organic Grocery Food
             </h1>
             <h5 className="description-text">
@@ -59,8 +60,10 @@ const Home = () => {
           </div>
         </div>
         <div className="image-section">
-          <img src={img} alt="main" className="responsive-image" />
+          <img src={img} alt="main" className="responsive-image" /> 
+          <img src={leaf} alt="main" className="responsive-image-leaf" />
         </div>
+        
       </div>
       <div className="container-category">
         <div className="category-heading">

@@ -1,3 +1,4 @@
+
 .flex-box-home {
   display: flex;
 }
@@ -7,20 +8,30 @@
   padding: 2rem;
   background-color: #f2f1ec;
   height: 100vh;
-  /* margin-top:5rem; */
+  font-family: "Poppins", sans-serif;
+}
+
+.main-text{
+  font-family: "Lora", serif;
+  font-size: 60px;
 }
 
 .heading-home {
-  margin-top: 10rem;
+  margin-top: 6rem;
   padding: 2rem;
 }
 
+.heading-home h3{
+  font-size: 30px;
+}
+
 .discount-text {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .description-text {
   margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .shop-button {
@@ -33,10 +44,8 @@
 
 /* Image section styling */
 .image-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex:1;
+  display: flex;  
   background-color: #335232;
 }
 
@@ -44,6 +53,18 @@
   max-width: 100%;
   height: auto;
   max-height: 600px;
+  position: relative;
+  right: 120px;
+  top: 80px;
+}
+
+.responsive-image-leaf{
+  max-width: 30%;
+  position: relative;
+  max-height: 10%;  
+  right: 170px;
+  top: 550px;
+  rotate: 230deg;
 }
 
 .custom-span {
@@ -58,11 +79,13 @@
   color: white;
   border-radius: 25px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .number-container {
   display: flex;
   gap: 10px;
+  font-family: "Lora", serif;
 }
 
 .number-box {
@@ -101,6 +124,13 @@
   text-align: center;
 }
 
+.category-heading h1{
+  font-family: "Lora", serif;
+}
+
+.category-heading h3{
+  font-family: "Poppins", sans-serif;
+}
 .category-buttons{
   display: flex;
   justify-content: center;
