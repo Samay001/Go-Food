@@ -6,13 +6,20 @@ import FoodDetails from "../components/foodDetails";
 import axios from "axios";
 import leaf from "../assets/leaf.png";
 import lemon from "../assets/lemon.avif";
+import CustomBtn from "../components/customButton";
+import {FiArrowRight } from 'react-icons/fi';
 
 const Home = () => {
   const [category, setCategory] = useState("beef");
   const [foodItems, setFoodItems] = useState([]);
 
   const handleCategory = (e) => {
+    const buttons = document.querySelectorAll('.cus-btn');
+    buttons.forEach(button => {
+      button.classList.remove('active');
+    });
     setCategory(e.target.innerText.trim());
+    e.target.classList.add('active');
   };
 
   const fetchData = async () => {
@@ -37,13 +44,13 @@ const Home = () => {
         <div className="text-section">
           <div className="heading-home">
             <h3 className="discount-text">Discount up to 20%</h3>
-            <h1 class="main-text">
+            <h1 className="main-text">
               Buy Fresh And Organic Grocery Food
-              <span class="rounded-rectangle">
+              <span className="rounded-rectangle">
                 <img
                   src={lemon}
                   alt="Grocery Image" 
-                  class="fruit-image "
+                  className="fruit-image"
                 />
               </span>
             </h1>
@@ -53,7 +60,7 @@ const Home = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </h5>
             <span className="custom-span">
-              <button className="custom-button">Shop Now</button>
+              <button className="custom-button1">Shop Now<FiArrowRight className="dropdown-icon" /></button>
               <div className="number-container">
                 <div className="number-box">
                   <div className="number">35k +</div>
@@ -75,27 +82,17 @@ const Home = () => {
       </div>
       <div className="container-category">
         <div className="category-heading">
-          <h3>Shop by Categories</h3>
+          <h4>Shop by Category</h4>
         </div>
         <div className="category-heading">
           <h1>Top Category Of Organic Food</h1>
         </div>
         <div className="category-buttons">
-          <button className="category-button" onClick={handleCategory}>
-            beef
-          </button>
-          <button className="category-button" onClick={handleCategory}>
-            breakfast
-          </button>
-          <button className="category-button" onClick={handleCategory}>
-            chicken
-          </button>
-          <button className="category-button" onClick={handleCategory}>
-            dessert
-          </button>
-          <button className="category-button" onClick={handleCategory}>
-            seafood
-          </button>
+          <CustomBtn className="cus-btn" btnName="Beef" onClick={handleCategory} />
+          <CustomBtn className="cus-btn" btnName="Breakfast" onClick={handleCategory} />
+          <CustomBtn className="cus-btn" btnName="Chicken" onClick={handleCategory} />
+          <CustomBtn className="cus-btn" btnName="Dessert" onClick={handleCategory} />
+          <CustomBtn className="cus-btn" btnName="Seafood" onClick={handleCategory} />
         </div>
         <div className="container">
           {foodItems.slice(0, 6).map((item) => (
