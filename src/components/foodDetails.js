@@ -12,11 +12,11 @@ const FoodDetails = ({ food }) => {
       <span className="container2">
         <div className="partition1">
           <span><h3>{food.strMeal}</h3></span>
-          <span><p>$8.45</p></span>
+          <span className="pricing"><p>$8.45</p></span>
         </div>
         <div className="partition2">
           <span><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5></span>
-          <span><button>Shop Now <FiArrowRight className="dropdown-icon" /></button></span>
+          <span className="shop"><button className="shop-btn">Shop Now <FiArrowRight className="dropdown-icon" /></button></span>
         </div>
       </span>
     </div>

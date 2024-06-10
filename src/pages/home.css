@@ -1,7 +1,9 @@
+
+/* Styles for active state */
 .active {
   background-color: #4f684a;
   color: white;
-} 
+}
 
 .flex-box-home {
   display: flex;
@@ -19,7 +21,6 @@
   font-family: "Lora", serif;
   font-size: 3rem; 
   margin-top: 0;
-  /* margin-bottom: 0; */
 }
 
 .rounded-rectangle {
@@ -33,9 +34,10 @@
   align-items: center;
   margin: 20px auto; 
   position: relative;
-  top:-70px;
-  left:90px;
+  top: -70px;
+  left: 90px;
 }
+
 .custom-button1 {
   padding: 10px 20px;
   background-color: #335232;
@@ -46,6 +48,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
+
 .fruit-image {
   width: 100%;
   height: auto;
@@ -58,7 +61,7 @@
 }
 
 .heading-home h3 {
-  font-size: 1.5rem; /* Adjusted for responsiveness */
+  font-size: 1.5rem; 
 }
 
 .discount-text {
@@ -74,16 +77,14 @@
 .custom-span {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+  flex-wrap: wrap; 
 }
-
-
 
 .number-container {
   display: flex;
   gap: 10px;
   font-family: "Lora", serif;
-  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .number-box {
@@ -96,12 +97,12 @@
 }
 
 .number {
-  font-size: 1.5rem; /* Adjusted for responsiveness */
+  font-size: 1.5rem; 
   font-weight: bold;
 }
 
 .user-text {
-  font-size: 0.875rem; /* Adjusted for responsiveness */
+  font-size: 0.875rem;
   color: #555;
 }
 
@@ -138,10 +139,11 @@
   max-width: 7.5%;
   position: absolute;
   max-height: 4%;
-  left:31%;
+  left: 31%;
   top: 36%;
   rotate: 150deg;
 }
+
 .responsive-image-leaf3 {
   max-width: 7.5%;
   position: relative;
@@ -151,23 +153,24 @@
   rotate: 250deg;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .responsive-image-leaf1{
+  .container-category {
+    padding: 0.5rem;
+  }
+  .responsive-image-leaf1 {
     display: none;
   }
-  .responsive-image-leaf2{
+  .responsive-image-leaf2 {
     display: none;
   }
-  .responsive-image-leaf3{
+  .responsive-image-leaf3 {
     display: none;
   }
-  .rounded-rectangle{
+  .rounded-rectangle {
     display: none;
   }
-  .responsive-image {
-    max-width: 100%;
-    height: auto;
-  }
+
   .flex-box-home {
     flex-direction: column;
   }
@@ -185,7 +188,7 @@
 
   .main-text {
     font-size: 1.75rem;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
   }
 
   .rectangle {
@@ -204,8 +207,8 @@
   .description-text {
     font-size: 0.875rem;
   }
-  .discount-text{
-    margin-top:0.2rem;
+  .discount-text {
+    margin-top: 0.2rem;
   }
 
   .custom-button1 {
@@ -215,9 +218,10 @@
   }
 
   .responsive-image {
+    max-width: 100%;
+    height: auto;
     max-height: 400px;
-    top: 0;
-    right: 0; 
+    left: 5px;
   }
 
   .responsive-image-leaf2 {
@@ -230,6 +234,83 @@
     max-width: 5%;
     right: 2%;
     top: 2%;
+  }
+}
+
+/* Media query for iPad Pro (1024px) */
+@media (max-width: 1024px) {
+  .flex-box-home {
+    flex-direction: column;
+  }
+
+  .text-section,
+  .image-section {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .main-text {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem;
+  }
+
+  .rounded-rectangle {
+    width: 180px;
+    height: 35px;
+    top: -60px;
+    left: 70px;
+  }
+
+  .responsive-image {
+    max-height: 500px;
+    top: -5px;
+    right: 100px;
+  }
+
+  .responsive-image-leaf1 {
+    display: none;
+  }
+  .responsive-image-leaf2 {
+    display: none;
+  }
+  .responsive-image-leaf3 {
+    display: none;
+  }
+  .rounded-rectangle {
+    display: none;
+  }
+
+  .responsive-image-leaf2 {
+    max-width: 12%;
+    right: 12%;
+    bottom: 8%;
+  }
+
+  .responsive-image-leaf1 {
+    max-width: 6%;
+    left: 28%;
+    top: 32%;
+  }
+
+  .responsive-image-leaf3 {
+    max-width: 6%;
+    right: 28%;
+    top: 32%;
+  }
+
+  .heading-home {
+    margin-top: 6rem;
+    padding: 1rem;
+  }
+
+  .discount-text,
+  .description-text {
+    font-size: 1rem;
+  }
+
+  .custom-button1 {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }
 
@@ -252,19 +333,10 @@
   margin: 1rem 0; 
 }
 
-/* .category-button {
-  padding: 10px 20px;
-  background-color: #4f684a;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-} */
-
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem; /* Added gap for spacing between items */
+  gap: 1rem; 
   padding: 2rem 1rem;
 }
