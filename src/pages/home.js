@@ -9,9 +9,11 @@ import lemon from "../assets/lemon.avif";
 import CustomBtn from "../components/customButton";
 import {FiArrowRight } from 'react-icons/fi';
 
+
 const Home = () => {
-  const [category, setCategory] = useState("beef");
+  const [category, setCategory] = useState("pork");
   const [foodItems, setFoodItems] = useState([]);
+
 
   const handleCategory = (e) => {
     const buttons = document.querySelectorAll('.cus-btn');
@@ -88,7 +90,7 @@ const Home = () => {
           <h1>Top Category Of Organic Food</h1>
         </div>
         <div className="category-buttons">
-          <CustomBtn className="cus-btn" btnName="Beef" onClick={handleCategory} />
+          <CustomBtn className="cus-btn" btnName="Pork" onClick={handleCategory} />
           <CustomBtn className="cus-btn" btnName="Breakfast" onClick={handleCategory} />
           <CustomBtn className="cus-btn" btnName="Chicken" onClick={handleCategory} />
           <CustomBtn className="cus-btn" btnName="Dessert" onClick={handleCategory} />
